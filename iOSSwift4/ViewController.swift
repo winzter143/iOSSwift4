@@ -52,5 +52,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
+    
+    // Delete the row
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            //NSLog("Delete @s", data[indexPath.row].cellMessage)
+//            data.remove(at: indexPath.row)
+//            tableView.deleteRows(at: indexPath, with: .fade)
+        }
+    }
 }
 

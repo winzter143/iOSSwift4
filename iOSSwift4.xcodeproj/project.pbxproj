@@ -18,6 +18,8 @@
 		B73545352085FA6900BEA49E /* FishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73545342085FA6900BEA49E /* FishViewController.swift */; };
 		B7D1B4F22088672B00634131 /* ItemDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F12088672B00634131 /* ItemDetailsController.swift */; };
 		B7D1B4F32088672B00634131 /* ItemDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F12088672B00634131 /* ItemDetailsController.swift */; };
+		B7D1B4F52089CDE300634131 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F42089CDE300634131 /* RatingControl.swift */; };
+		B7D1B4F62089CDE300634131 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F42089CDE300634131 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 		B73545342085FA6900BEA49E /* FishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishViewController.swift; sourceTree = "<group>"; };
 		B7572FBB2085DCDA00EDE539 /* iOSSwift4.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSSwift4.entitlements; sourceTree = "<group>"; };
 		B7D1B4F12088672B00634131 /* ItemDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsController.swift; sourceTree = "<group>"; };
+		B7D1B4F42089CDE300634131 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 				B716508B20844C0D009AD0E1 /* Main.storyboard */,
 				B73545342085FA6900BEA49E /* FishViewController.swift */,
 				B7D1B4F12088672B00634131 /* ItemDetailsController.swift */,
+				B7D1B4F42089CDE300634131 /* RatingControl.swift */,
 				B716509120844C0D009AD0E1 /* Assets.xcassets */,
 				B716509320844C0D009AD0E1 /* LaunchScreen.storyboard */,
 				B716509620844C0D009AD0E1 /* Info.plist */,
@@ -280,6 +284,7 @@
 				B716508A20844C0D009AD0E1 /* ViewController.swift in Sources */,
 				B716508820844C0D009AD0E1 /* AppDelegate.swift in Sources */,
 				B716509020844C0D009AD0E1 /* iOSSwift4.xcdatamodeld in Sources */,
+				B7D1B4F52089CDE300634131 /* RatingControl.swift in Sources */,
 				B7D1B4F22088672B00634131 /* ItemDetailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71650AB20844C0D009AD0E1 /* iOSSwift4UITests.swift in Sources */,
+				B7D1B4F62089CDE300634131 /* RatingControl.swift in Sources */,
 				B7D1B4F32088672B00634131 /* ItemDetailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

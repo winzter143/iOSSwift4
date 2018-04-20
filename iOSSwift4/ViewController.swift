@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         data = [CellData.init(cellImage: #imageLiteral(resourceName: "shark"), cellMessage: "Helloword shark"),CellData.init(cellImage: #imageLiteral(resourceName: "octopus"), cellMessage: "Helloword Octopus"),CellData.init(cellImage: #imageLiteral(resourceName: "shark"), cellMessage: "Helloword shark again")]
-        tableView.reloadData()
+        //tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

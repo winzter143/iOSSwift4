@@ -4,16 +4,16 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List of Data-->
+        <!--List Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="List of Data" id="BYZ-38-t0r" customClass="ViewController" customModule="iOSSwift4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="List Item" id="BYZ-38-t0r" customClass="ViewController" customModule="iOSSwift4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,8 +36,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hft-3J-YTb"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AdY-rs-5D0"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="eBS-ej-FrK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ldz-01-3Sx"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -46,36 +46,83 @@
                     </view>
                     <navigationItem key="navigationItem" id="Gey-1t-gKe"/>
                     <connections>
-                        <outlet property="tableView" destination="Y3m-pi-Vgj" id="kuA-Ig-t4z"/>
+                        <outlet property="tableView" destination="Y3m-pi-Vgj" id="Ktc-f9-Oe9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279.19999999999999" y="30.134932533733135"/>
+            <point key="canvasLocation" x="130" y="20"/>
         </scene>
-        <!--View Controller-->
+        <!--Item Details-->
         <scene sceneID="nJz-Sh-8zC">
             <objects>
-                <viewController id="OC1-1L-auv" sceneMemberID="viewController">
+                <viewController title="Item Details" id="OC1-1L-auv" customClass="ItemDetailsController" customModule="iOSSwift4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uhf-dh-Vku">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Helow World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnI-TG-MNS">
-                                <rect key="frame" x="104" y="247" width="202" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qKp-UY-CaP">
+                                <rect key="frame" x="0.0" y="107" width="78" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-qu-g7V">
+                                <rect key="frame" x="38" y="124" width="279" height="359.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fish name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnI-TG-MNS">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fish Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-c0-fQV">
+                                        <rect key="frame" x="0.0" y="20.5" width="89" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIE-pm-7IE">
+                                        <rect key="frame" x="0.0" y="50.5" width="34" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="btnSaveAction:" destination="OC1-1L-auv" eventType="touchUpInside" id="bhG-be-PKF"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="octopus" translatesAutoresizingMaskIntoConstraints="NO" id="xfM-Xp-Cf5">
+                                        <rect key="frame" x="0.0" y="80.5" width="279" height="279"/>
+                                        <color key="tintColor" red="1" green="0.23258046325634063" blue="0.90995733884662089" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xfM-Xp-Cf5" secondAttribute="height" multiplier="1:1" id="8BP-g6-jmn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="J9e-cb-VAP" appends="YES" id="OpA-pR-lwx"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="MYK-za-gOt"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="J9e-cb-VAP" appends="YES" id="cW5-U0-KND"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="lblFishName" destination="LnI-TG-MNS" id="ucT-cG-OIP"/>
+                        <outlet property="photoView" destination="xfM-Xp-Cf5" id="Vnm-ra-Nhv"/>
+                        <outlet property="txtFishName" destination="0oU-c0-fQV" id="O8v-44-7qb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWF-w1-PdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="J9e-cb-VAP">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="OC1-1L-auv" id="UYt-0X-7gg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="199.25037481259372"/>
+            <point key="canvasLocation" x="1104.8" y="18.440779610194905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sfj-oo-wd6">
@@ -93,7 +140,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFL-Rj-rP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535" y="23"/>
+            <point key="canvasLocation" x="-638" y="21"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="octopus" width="186" height="279"/>
+    </resources>
 </document>

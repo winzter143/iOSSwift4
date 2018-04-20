@@ -13,12 +13,13 @@ class RatingControl: UIStackView {
     
     //MARK: Initialization
     override init(frame: CGRect) {
-        super.init(frame: <#T##CGRect#>)
+        super.init(frame: frame)
         setupButtons()
     }
     
     // This reqiired in impleted by UIStackView
     required init(coder: NSCoder) {
+        super.init(coder: coder)
         setupButtons()
     }
     
@@ -37,4 +38,9 @@ class RatingControl: UIStackView {
         addArrangedSubview(button)
     }
    
+    //MARK: Action
+    func ratingButtonTapped(button: UIButton) {
+        print("Button pressed 👍")
+    }
+    
 }

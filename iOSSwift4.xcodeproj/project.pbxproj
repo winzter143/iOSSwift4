@@ -16,6 +16,7 @@
 		B71650A020844C0D009AD0E1 /* iOSSwift4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B716509F20844C0D009AD0E1 /* iOSSwift4Tests.swift */; };
 		B71650AB20844C0D009AD0E1 /* iOSSwift4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71650AA20844C0D009AD0E1 /* iOSSwift4UITests.swift */; };
 		B73545352085FA6900BEA49E /* FishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73545342085FA6900BEA49E /* FishViewController.swift */; };
+		B7548E1B208DD8250048CB91 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7548E1A208DD8250048CB91 /* HttpUtil.swift */; };
 		B7D1B4F22088672B00634131 /* ItemDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F12088672B00634131 /* ItemDetailsController.swift */; };
 		B7D1B4F32088672B00634131 /* ItemDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F12088672B00634131 /* ItemDetailsController.swift */; };
 		B7D1B4F52089CDE300634131 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F42089CDE300634131 /* RatingControl.swift */; };
@@ -55,6 +56,7 @@
 		B71650AA20844C0D009AD0E1 /* iOSSwift4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSwift4UITests.swift; sourceTree = "<group>"; };
 		B71650AC20844C0D009AD0E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B73545342085FA6900BEA49E /* FishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishViewController.swift; sourceTree = "<group>"; };
+		B7548E1A208DD8250048CB91 /* HttpUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
 		B7572FBB2085DCDA00EDE539 /* iOSSwift4.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSSwift4.entitlements; sourceTree = "<group>"; };
 		B7D1B4F12088672B00634131 /* ItemDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsController.swift; sourceTree = "<group>"; };
 		B7D1B4F42089CDE300634131 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B716508B20844C0D009AD0E1 /* Main.storyboard */,
 				B73545342085FA6900BEA49E /* FishViewController.swift */,
 				B7D1B4F12088672B00634131 /* ItemDetailsController.swift */,
+				B7548E1A208DD8250048CB91 /* HttpUtil.swift */,
 				B7D1B4F42089CDE300634131 /* RatingControl.swift */,
 				B716509120844C0D009AD0E1 /* Assets.xcassets */,
 				B716509320844C0D009AD0E1 /* LaunchScreen.storyboard */,
@@ -283,6 +286,7 @@
 				B73545352085FA6900BEA49E /* FishViewController.swift in Sources */,
 				B716508A20844C0D009AD0E1 /* ViewController.swift in Sources */,
 				B716508820844C0D009AD0E1 /* AppDelegate.swift in Sources */,
+				B7548E1B208DD8250048CB91 /* HttpUtil.swift in Sources */,
 				B716509020844C0D009AD0E1 /* iOSSwift4.xcdatamodeld in Sources */,
 				B7D1B4F52089CDE300634131 /* RatingControl.swift in Sources */,
 				B7D1B4F22088672B00634131 /* ItemDetailsController.swift in Sources */,

@@ -15,10 +15,7 @@ class ItemDetailsController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBOutlet weak var txtFishName: UITextField!
     @IBOutlet weak var lblFishName: UILabel!
     @IBOutlet weak var photoView: UIImageView!
-    
-    
-    
-    
+    @IBOutlet weak var ratingControl: RatingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()

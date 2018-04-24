@@ -25,8 +25,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        data = [CellData.init(cellImage: #imageLiteral(resourceName: "shark"), cellMessage: "Helloword shark"),CellData.init(cellImage: #imageLiteral(resourceName: "octopus"), cellMessage: "Helloword Octopus"),CellData.init(cellImage: #imageLiteral(resourceName: "shark"), cellMessage: "Helloword shark again")]
-        //tableView.reloadData()
+        self.data = [CellData.init(cellImage: #imageLiteral(resourceName: "shark"), cellMessage: "Helloword shark"),CellData.init(cellImage: #imageLiteral(resourceName: "octopus"), cellMessage: "Helloword Octopus"),CellData.init(cellImage: #imageLiteral(resourceName: "shark"), cellMessage: "Helloword shark again")]
+        let httpUtil = HttpUtil()
+        //let result = Result<[User]>?.self
+        //DispatchQueue.main.async {
+        httpUtil.getPosts { (result) in
+            switch result {
+            case .success(let posts):
+//                self.posts = posts
+                print("Success!!!!")
+            
+                self.data = []
+                for post in posts{
+                    self.data.append(CellData.init(cellImage: #imageLiteral(resourceName: "shark"), cellMessage: post.first_name + post.image ))
+                }
+                self.tableView.reloadData()
+            case .failure(let error):
+                fatalError("error: \(error.localizedDescription)")
+            }
+        }
+            
+        //}
+        
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

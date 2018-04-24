@@ -66,7 +66,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-qu-g7V">
-                                <rect key="frame" x="38" y="124" width="279" height="359.5"/>
+                                <rect key="frame" x="38" y="124" width="279" height="403.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fish name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnI-TG-MNS">
@@ -99,19 +99,18 @@
                                             <outletCollection property="gestureRecognizers" destination="J9e-cb-VAP" appends="YES" id="OpA-pR-lwx"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vop-id-VuJ" userLabel="I" customClass="RatingControl" customModule="iOSSwift4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="359.5" width="252" height="44"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                <size key="value" width="44" height="44"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vop-id-VuJ" userLabel="I" customClass="RatingControl" customModule="iOSSwift4" customModuleProvider="target">
-                                <rect key="frame" x="38" y="485" width="254" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="44" height="44"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,6 +123,7 @@
                     <connections>
                         <outlet property="lblFishName" destination="LnI-TG-MNS" id="ucT-cG-OIP"/>
                         <outlet property="photoView" destination="xfM-Xp-Cf5" id="Vnm-ra-Nhv"/>
+                        <outlet property="ratingControl" destination="Vop-id-VuJ" id="z63-4N-Mzt"/>
                         <outlet property="txtFishName" destination="0oU-c0-fQV" id="O8v-44-7qb"/>
                     </connections>
                 </viewController>

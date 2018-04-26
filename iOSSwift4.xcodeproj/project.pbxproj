@@ -17,6 +17,7 @@
 		B71650AB20844C0D009AD0E1 /* iOSSwift4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71650AA20844C0D009AD0E1 /* iOSSwift4UITests.swift */; };
 		B73545352085FA6900BEA49E /* FishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73545342085FA6900BEA49E /* FishViewController.swift */; };
 		B7548E1B208DD8250048CB91 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7548E1A208DD8250048CB91 /* HttpUtil.swift */; };
+		B7548E1D208F2B320048CB91 /* HomeContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7548E1C208F2B320048CB91 /* HomeContoller.swift */; };
 		B7D1B4F22088672B00634131 /* ItemDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F12088672B00634131 /* ItemDetailsController.swift */; };
 		B7D1B4F32088672B00634131 /* ItemDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F12088672B00634131 /* ItemDetailsController.swift */; };
 		B7D1B4F52089CDE300634131 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1B4F42089CDE300634131 /* RatingControl.swift */; };
@@ -57,6 +58,7 @@
 		B71650AC20844C0D009AD0E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B73545342085FA6900BEA49E /* FishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishViewController.swift; sourceTree = "<group>"; };
 		B7548E1A208DD8250048CB91 /* HttpUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
+		B7548E1C208F2B320048CB91 /* HomeContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContoller.swift; sourceTree = "<group>"; };
 		B7572FBB2085DCDA00EDE539 /* iOSSwift4.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSSwift4.entitlements; sourceTree = "<group>"; };
 		B7D1B4F12088672B00634131 /* ItemDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsController.swift; sourceTree = "<group>"; };
 		B7D1B4F42089CDE300634131 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				B7572FBB2085DCDA00EDE539 /* iOSSwift4.entitlements */,
 				B716508720844C0D009AD0E1 /* AppDelegate.swift */,
 				B716508920844C0D009AD0E1 /* ViewController.swift */,
+				B7548E1C208F2B320048CB91 /* HomeContoller.swift */,
 				B716508B20844C0D009AD0E1 /* Main.storyboard */,
 				B73545342085FA6900BEA49E /* FishViewController.swift */,
 				B7D1B4F12088672B00634131 /* ItemDetailsController.swift */,
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73545352085FA6900BEA49E /* FishViewController.swift in Sources */,
+				B7548E1D208F2B320048CB91 /* HomeContoller.swift in Sources */,
 				B716508A20844C0D009AD0E1 /* ViewController.swift in Sources */,
 				B716508820844C0D009AD0E1 /* AppDelegate.swift in Sources */,
 				B7548E1B208DD8250048CB91 /* HttpUtil.swift in Sources */,

@@ -16,6 +16,7 @@ struct CellData {
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     // Create data to hole the array of cell data.
     var data = [CellData]()
     
@@ -29,7 +30,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let httpUtil = HttpUtil()
         //let result = Result<[User]>?.self
         //DispatchQueue.main.async {
-        httpUtil.getPosts { (result) in
+//        httpUtil.getPosts { (result) in
+        
+        httpUtil.getPosts(searchKey: "", completion: { (result) in
             switch result {
             case .success(let posts):
 //                self.posts = posts
@@ -43,8 +46,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             case .failure(let error):
                 fatalError("error: \(error.localizedDescription)")
             }
-        }
-            
+        })
+        
         //}
         
         tableView.reloadData()
@@ -57,11 +60,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "CellID"
+        print("tableView index: \(indexPath.row)")
+        // unable to dequeue a cell with identifier CellID - must register a nib or a class for the identifier or connect a prototype cell in a storyboard'
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier:cellIdentifier)
+        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         cell.textLabel?.text = data[indexPath.row].cellMessage
         cell.imageView?.image = data[indexPath.row].cellImage
         
+        print("tableView index DONE: \(indexPath.row)")
         return cell
     }
 
@@ -73,6 +81,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
+    
+    // Set height of the row.
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        // Working
+//        return 100;
+//    }
     
     // Delete the row
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

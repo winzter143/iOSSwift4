@@ -39,7 +39,7 @@ class HttpUtil{
     
 //    func getPosts(for userId: Int, completion: ((Result<[User]>) -> Void)?) {
     //                          completionBlock: @escaping (String) -> Void
-    func getPosts( completion: ((Result<[User]>) -> Void)?) -> Void{
+    func getPosts(searchKey: String?, completion: ((Result<[User]>) -> Void)?) -> Void{
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -48,12 +48,18 @@ class HttpUtil{
         let userIdItem = URLQueryItem(name: "count", value: "\(count)")
 //        urlComponents.queryItems = [userIdItem, URLQueryItem(name: "key", value: "51231710")]
         urlComponents.queryItems = [userIdItem]
+        //urlComponents.queryItems?.append(<#T##newElement: URLQueryItem##URLQueryItem#>)
+        if let key = searchKey{
+            print("Searkey Key OK: \(key)")
+            urlComponents.queryItems?.append(URLQueryItem(name: "search", value: key));
+        }
+//        urlComponents.queryItems?.append()
         guard let url = urlComponents.url else { fatalError("Could not create URL from components") }
         
         var request = URLRequest(url: url)
         // "X-API-Key: 51231710"
         request.addValue("51231710", forHTTPHeaderField: "X-API-Key")
-      
+    
         request.httpMethod = "GET"
         
         let config = URLSessionConfiguration.default
